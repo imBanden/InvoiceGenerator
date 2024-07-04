@@ -24,9 +24,9 @@ const InvoiceDetails = ({ updatePdfData }: InvoiceDetailsProps) => {
   ]);
 
   const currencyImgSrc: { [key: string]: string } = {
-    USD: "src/assets/United-states_flag_icon_round.svg",
-    EUR: "src/assets/Europe_flag_circle.png",
-    GBP: "src/assets/United-kingdom_flag_icon_round.svg",
+    USD: "/assets/United-states_flag_icon_round.svg",
+    EUR: "/assets/Europe_flag_circle.png",
+    GBP: "/assets/United-kingdom_flag_icon_round.svg",
   };
 
   const addItem = () => {
@@ -136,7 +136,7 @@ const InvoiceDetails = ({ updatePdfData }: InvoiceDetailsProps) => {
               </div>
               <img
                 className={currencyOptionList ? "rotate0" : "rotate90"}
-                src="src/assets/MaterialSymbolsKeyboardArrowDown.svg"
+                src="/assets/MaterialSymbolsKeyboardArrowDown.svg"
               />
             </div>
           </button>
@@ -165,7 +165,7 @@ const InvoiceDetails = ({ updatePdfData }: InvoiceDetailsProps) => {
               {currentCurrency === "USD" && (
                 <img
                   className="currency-current-check"
-                  src="src\assets\MaterialSymbolsCheckCircle.svg"
+                  src="assets\MaterialSymbolsCheckCircle.svg"
                 ></img>
               )}
             </button>
@@ -189,7 +189,7 @@ const InvoiceDetails = ({ updatePdfData }: InvoiceDetailsProps) => {
               {currentCurrency === "EUR" && (
                 <img
                   className="currency-current-check"
-                  src="src\assets\MaterialSymbolsCheckCircle.svg"
+                  src="assets\MaterialSymbolsCheckCircle.svg"
                 ></img>
               )}
             </button>
@@ -213,7 +213,7 @@ const InvoiceDetails = ({ updatePdfData }: InvoiceDetailsProps) => {
               {currentCurrency === "GBP" && (
                 <img
                   className="currency-current-check"
-                  src="src\assets\MaterialSymbolsCheckCircle.svg"
+                  src="assets\MaterialSymbolsCheckCircle.svg"
                 ></img>
               )}
             </button>
@@ -265,7 +265,7 @@ const InvoiceDetails = ({ updatePdfData }: InvoiceDetailsProps) => {
                 >
                   <img
                     className="invoice-item-delete-button-logo"
-                    src="src\assets\MaterialSymbolsDeleteOutline.svg"
+                    src="assets\MaterialSymbolsDeleteOutline.svg"
                   />
                 </button>
               </div>
@@ -297,7 +297,7 @@ const InvoiceDetails = ({ updatePdfData }: InvoiceDetailsProps) => {
           <div>More options</div>
           <img
             className={optionClicked ? "rotate0" : "rotate90"}
-            src="src\assets\MaterialSymbolsKeyboardArrowDown.svg"
+            src="assets\MaterialSymbolsKeyboardArrowDown.svg"
           ></img>
         </button>
 

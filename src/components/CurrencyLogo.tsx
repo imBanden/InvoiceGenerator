@@ -13,7 +13,7 @@ const CurrencyLogo = ({ currency }: Props) => {
           <img
             className="pdf-payment-method-currency-logo"
             src={useLoadImageBase64(
-              "src/assets/United-states_flag_icon_round.svg"
+              "/assets/United-states_flag_icon_round.svg"
             )}
           />
           <div>
@@ -28,7 +28,7 @@ const CurrencyLogo = ({ currency }: Props) => {
         <div className="pdf-payment-method-currency-container">
           <img
             className="pdf-payment-method-currency-logo"
-            src={useLoadImageBase64("src/assets/Europe_flag_circle.png")}
+            src={useLoadImageBase64("/assets/Europe_flag_circle.png")}
           />
           <div>
             <div className="pdf-payment-method-currency-name">Euro</div>
@@ -43,7 +43,7 @@ const CurrencyLogo = ({ currency }: Props) => {
           <img
             className="pdf-payment-method-currency-logo"
             src={useLoadImageBase64(
-              "src/assets/United-kingdom_flag_icon_round.svg"
+              "/assets/United-kingdom_flag_icon_round.svg"
             )}
           />
           <div>

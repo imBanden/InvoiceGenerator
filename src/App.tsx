@@ -126,7 +126,7 @@ function App() {
           <div className="main-container-header-container">
             <img
               className="main-container-header-image"
-              src="src/assets/MaterialSymbolsDocumentScanner.svg"
+              src="/assets/MaterialSymbolsDocumentScanner.svg"
             />
             <div className="main-container-header-words">
               <div className="main-container-header-words-invoice">
@@ -134,9 +134,7 @@ function App() {
               </div>
               <div className="main-container-header-words-majilabs">
                 By{" "}
-                <img
-                  src={useLoadImageBase64("src/assets/maji-labs-logo.svg")}
-                />
+                <img src={useLoadImageBase64("/assets/maji-labs-logo.svg")} />
               </div>
             </div>
           </div>
@@ -173,7 +171,7 @@ function App() {
               <div className="nav-button-container">
                 <img
                   className="main-nav-buttons-icon"
-                  src="src\assets\MaterialSymbolsArrowBackIos.svg"
+                  src="assets\MaterialSymbolsArrowBackIos.svg"
                 />
                 <div>Back</div>
               </div>
@@ -191,7 +189,7 @@ function App() {
                 <div>Next</div>
                 <img
                   className="main-nav-buttons-icon"
-                  src="src\assets\MaterialSymbolsArrowForwardIos.svg"
+                  src="assets\MaterialSymbolsArrowForwardIos.svg"
                 />
               </div>
               <div className="nav-header">{pages[currentPage + 1]}</div>

@@ -372,7 +372,7 @@ const MyPdfMain = ({
                 <span>
                   <img
                     className="maji-lab-logo"
-                    src={useLoadImageBase64("src/assets/maji-labs-logo.svg")}
+                    src={useLoadImageBase64("/assets/maji-labs-logo.svg")}
                   />
                 </span>
               </div>

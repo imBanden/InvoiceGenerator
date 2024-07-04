@@ -52,7 +52,7 @@ const ImageUploader = ({ label, imgSrc }: Props) => {
           />
           <img
             className="image-uploader-logo"
-            src="src/assets/MaterialSymbolsAdd.svg"
+            src="/assets/MaterialSymbolsAdd.svg"
           />
         </div>
       </div>

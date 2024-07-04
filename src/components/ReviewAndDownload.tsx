@@ -14,7 +14,7 @@ const ReviewAndDownload = ({ onButtonClick }: Props) => {
         <button onClick={onButtonClick} className="review-download-button">
           <img
             className="review-download-button-icon"
-            src="src\assets\MaterialSymbolsDownload.svg"
+            src="assets\MaterialSymbolsDownload.svg"
           />
           Download
         </button>
@@ -22,7 +22,7 @@ const ReviewAndDownload = ({ onButtonClick }: Props) => {
         <button className="review-create-new-button">
           <img
             className="review-create-new-button-icon"
-            src="src\assets\MaterialSymbolsRefresh.svg"
+            src="assets\MaterialSymbolsRefresh.svg"
           />
           Create New
         </button>
