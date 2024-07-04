@@ -1,0 +1,1074 @@
+#root{
+  height: 100%;
+}
+
+body{
+  margin: 0;
+  height: 100vh;
+}
+
+:root{
+  --main-font:  "Inter", sans-serif;
+  --black: hsl(0, 0%, 0%);
+  --white: hsl(0, 0%, 100%);
+  --grey: hsl(0, 0%, 50%);
+  --dark-grey: hsl(0, 0%, 25%);
+  --light-grey: hsl(0, 0%, 75%);
+  --darker-grey: hsl(0, 0%, 12.5%);
+  --lighter-grey: hsl(0, 0%, 87.5%);
+  --bold: 700;
+  --normal-weight: 400;
+  --blue: hsl(218, 89%, 63%);
+}
+
+input[type="file"] {
+  /* position: absolute; */
+  width: 100%;
+  height: 100%
+}
+
+@keyframes ani-move-left-right {
+  0% {-webkit-mask-position: 0, 0}
+  100%{-webkit-mask-position: 1000px, 1000px}
+}
+
+@keyframes border-square-top-left{
+  0%  {transform: translate(0px, 0px);}
+  100% {transform: translate(8px, 8px);}
+}
+
+@keyframes border-square-top-right{
+  0%  {transform: translate(0px, 0px);}
+  100% {transform: translate(-8px, 8px);}
+}
+
+@keyframes border-square-bottom-left{
+  0%  {transform: translate(0px, 0px);}
+  100% {transform: translate(8px, -8px);}
+}
+
+@keyframes border-square-bottom-right{
+  0%  {transform: translate(0px, 0px);}
+  100% {transform: translate(-8px, -8px);}
+}
+
+@keyframes ani-pop-up {
+  0% {
+    transform: scale(0), translateY(0px);
+    opacity: 0;}
+    80% {
+      opacity: 0;
+    }
+  100%{
+    transform: scale(1), translateY(90px);
+    opacity: 1;
+  }
+}
+
+@keyframes ani-pop-down {
+  0% {
+    transform: scale(1), translateY(90px);
+    opacity: 1;
+    }
+    80% {
+      opacity: 1;
+    }
+  100%{
+    transform: scale(0), translateY(0px);
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  0% {opacity: 0; transform: translate(-50%, -10px);}
+  100% {opacity: 1; transform: translate(-50%, 0px);}
+}
+
+.spacer-v-10px {
+  height: 10px;
+}
+
+.ani-move-left-right{
+  animation: ani-move-left-right 150s linear infinite;
+}
+
+.main-container{
+  display: flex	;
+  flex-direction: row;
+  height: 100%;
+}
+
+.main-container-left{
+  display: flex	;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  align-items: center;
+  border-right: 1px solid hsla(0, 0%, 0%, 0.1);
+  flex: 3;
+  padding: 40px;
+  margin-left: 20px;
+}
+
+.main-container-right{
+  display: flex	;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 8;
+}
+
+/* header classes */
+.main-container-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+  padding-bottom: 100px;
+}
+
+.main-container-header-container{
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+}
+
+.main-container-header-words {
+  font-family: var(--main-font);
+  font-weight: var(--bold);
+}
+
+.main-container-header-words-invoice {
+  color: var(--black);
+  font-size: 16px;
+}
+
+.main-container-header-words-majilabs {
+  color: var(--light-grey);
+  font-size: 12px;
+}
+
+.main-container-header-words-majilabs>img {
+  object-fit: contain;
+  transform: translateY(2px);
+  height: 12px;
+}
+
+/* nav button classes */
+.main-nav-buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+}
+
+.main-nav-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: none;
+  background-color: var(--white);
+  font-family: var(--main-font);
+  font-weight: var(--bold);
+  padding: 20px 10px;
+  cursor: pointer;
+  color: var(--grey);
+}
+
+.main-nav-buttons-icon {
+  object-fit: contain;
+  height: 12px;
+}
+
+
+.nav-header {
+  color: var(--black);
+}
+
+.nav-button-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.my-company-container{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  font-family: var(--main-font);
+  width: 100%;
+}
+
+.my-company-header{
+  font-size: 24px;
+  font-weight: var(--bold);
+  padding-bottom: 10px;
+}
+
+
+.label-input-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid hsla(0, 0%, 0%, 0.1);
+  transition: border-bottom 100ms ease-in-out;
+  width: 100%;
+}
+
+.label-input-container:hover{
+  border-bottom: 1px solid hsla(0, 0%, 0%, 0.3);
+}
+
+.label-input-container:focus-within{
+  border-bottom: 1px solid var(--blue)
+}
+
+
+.my-company-form-labels{
+  font-weight: var(--bold);
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.my-company-form-inputs{
+  padding: 20px 10px;
+  width: 100%;
+  text-align: right;
+  outline: none;
+  border: none;
+  font-size: 14px;
+  font-weight: var(--normal-weight);
+  caret-color: var(--blue);
+}
+
+.my-company-form-inputs::placeholder{
+  color: var(--light-grey);
+  font-size: 12px;
+  font-weight: var(--bold);
+}
+
+.my-company-form-message{
+  color: var(--grey);
+  font-weight: var(--bold);
+  font-size: 12px;
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+
+.my-company-form-subheading {
+  color: var(--grey);
+  font-family: var(--main-font);
+  font-size: 14px;
+  font-weight: var(--bold);
+  padding-bottom: 20px;
+}
+
+.pdf-background-container{
+  background-image: url('assets/pattern-300.svg');
+  background-repeat: repeat;
+  width: 100%;
+  height: 100%;
+  -webkit-mask-image: url('assets/perlin-5.png');
+  mask-image: url('assets/perlin-5.png');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pdf-main-container{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 10;
+  width: 612.25px;
+  height: 866px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px hsla(0, 0%, 0%, 0.3);
+  background-color: white;
+  border: none;
+}
+
+
+/* invoice items classes */
+
+.invoice-item-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.invoice-item-delete-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: var(--white);
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  border-radius: 5px;
+  transition: all 200ms ease-in-out;
+}
+
+.invoice-item-delete-button:hover {
+  background-color: var(--lighter-grey);
+}
+
+.invoice-item-delete-button-logo {
+  height: 16px;
+}
+
+.invoice-item-inputs {
+  padding: 20px 10px;
+  width: 100%;
+  outline: none;
+  border: none;
+  font-size: 12px;
+  font-weight: var(--normal-weight);
+  border-bottom: 1px solid var(--lighter-grey);
+  transition: border-bottom 100ms ease-in-out;
+  padding-left: 0px;
+  caret-color: var(--blue);
+  box-sizing: border-box;
+}
+
+.invoice-item-inputs:hover {
+  border-bottom: 1px solid var(--light-grey);
+}
+
+.invoice-item-inputs::placeholder{
+  color: var(--light-grey);
+  font-size: 12px;
+  font-weight: var(--bold);
+}
+
+.invoice-item-inputs:focus{
+  color: var(--black);
+  font-size: 12px;
+  border-bottom: 1px solid var(--blue);
+}
+
+.invoice-item-add-button {
+  border: none;
+  border-bottom: 1px solid var(--lighter-grey);
+  width: 100%;
+  background-color: var(--white);
+  text-align: left;
+  padding: 20px 10px;
+  color: var(--blue);
+  font-size: 12px;
+  font-family: var(--main-font);
+  cursor: pointer;
+  font-weight: var(--bold);
+  margin-bottom: 40px;
+  transition: border-bottom 100ms ease-in-out;
+}
+
+.invoice-item-add-button:hover{
+  border-bottom: 1px solid var(--blue);
+}
+
+.spacer-right-20-px {
+  padding-right: 20px;
+  font-size: 16px;
+}
+
+.more-options-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+}
+
+.more-options-container.fade-in {
+  opacity: 1;
+}
+
+.more-option-button {
+  display: flex;
+  width: calc(100% + 20px);
+  color: var(--light-grey);
+  font-size: 14px;
+  font-weight: var(--bold);
+  border-radius: 10px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  background-color: var(--white);
+  padding: 10px 10px;
+  cursor: pointer;
+  transition: all 200ms ease-in;
+  margin-top: 40px;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.more-option-button:hover{
+  background-color: var(--lighter-grey);
+  color: var(--black);
+}
+
+.rotate90 {
+  transform: rotate(-90deg);
+  transition: transform 150ms ease;
+}
+
+.rotate0 {
+  transform: rotate(0deg);
+  transition: transform 150ms ease;
+}
+
+/* curency drop down list button */
+
+.currency-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.currency-input-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--lighter-grey);
+  background-color: var(--white);
+  padding: 20px 0px;
+  font-family: var(--main-font);
+  font-weight: var(--bold);
+  font-size: 16px;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+
+.currency-input-button:hover {
+  border-bottom: 1px solid var(--light-grey);
+}
+
+.currency-input-button:focus-within {
+  border-bottom: 1px solid var(--blue);
+}
+
+.currency-input-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 10px;
+  background-color: hsla(0, 0%, 50%, 0.05)
+}
+
+.currency-input-flag {
+  object-fit: contain;
+  height: 20px;
+  padding: 0px 5px;
+}
+
+.currency-input-ticker {
+  padding: 2px 5px;
+  color: var(--grey);
+  font-weight: var(--normal-weight);
+}
+
+.currency-input-flag-drop-container {
+  display: flex;
+}
+
+.currency-drop-down-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 0px 10px hsla(0, 0%, 0%, 0.05);
+  width: 100%;
+  padding: 10px 10px;
+  border-radius: 5px;
+  position: absolute;
+  background-color: var(--white);
+  transform: translateY(90px);
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+  pointer-events: none;
+}
+
+.currency-drop-down-list.pop-up {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.currency-drop-down-list-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: var(--bold);
+  font-family: var(--main-font);
+  width: 100%;
+  justify-content: space-between;
+  border: none;
+  background-color: var(--white);
+  border-radius: 5px;
+  padding: 10px 10px;
+  cursor: pointer;
+}
+
+.currency-drop-down-list-item:hover {
+  background-color: hsla(0, 0%, 0%, 0.05);
+}
+
+.currency-current-check {
+  object-fit: contain;
+  height: 16px;
+}
+
+.currency-list-item-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.currency-input-name {
+  padding: 0px 10px;
+}
+
+li {
+  list-style: none;
+}
+
+.invoice-terms-container {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--main-font);
+  width: 100%;
+}
+
+.invoice-terms-inputs{
+  padding: 20px 10px;
+  width: 100%;
+  text-align: right;
+  outline: none;
+  border: none;
+  font-size: 14px;
+  font-weight: var(--normal-weight);
+  font-family: var(--main-font);
+  caret-color: var(--blue);
+  cursor: pointer;
+}
+
+.invoice-terms-inputs::placeholder{
+  color: var(--light-grey);
+  font-size: 16px;
+  font-weight: var(--bold);
+}
+
+.review-download-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 10px;
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--main-font);
+  font-weight: var(--bold);
+  padding: 10px 20px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.review-download-button-icon {
+  object-fit: contain;
+  height: 20px;
+  padding-right: 5px;
+}
+
+.review-create-new-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 10px;
+  background: var(--white);
+  color: var(--black);
+  font-family: var(--main-font);
+  font-weight: var(--bold);
+  padding: 10px 20px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.review-create-new-button-icon {
+  object-fit: contain;
+  height: 20px;
+  padding-right: 5px;
+}
+
+
+/* pdf  classes */
+.pdf-main-container-move {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 10;
+  background-color: none;
+  width: 652.25px;
+  height: 906px;  /*866px*/
+  border: none;
+}
+
+.pdf-main-container{
+  font-family: var(--main-font);
+  font-weight: var(--bold);
+  font-size: 12px;
+}
+
+.pdf-invoice-term-container {
+  display: flex;
+  padding: 10px 40px;
+  border-bottom: 1px solid var(--lighter-grey);
+}
+
+.pdf-containers {
+  cursor: pointer;
+  position: relative;
+}
+
+.pdf-containers:hover{
+  background-color: hsla(0, 0%, 0%, 0.05);
+}
+
+.pdf-invoice-term-subcontainer {
+  display: flex;
+  justify-content: flex-start;
+  flex: 1;
+  column-gap: 40px;
+}
+
+.pad-40 {
+  padding-left: 40px;
+}
+
+.grey-text {
+  color: var(--grey);
+  row-gap: 10px;
+}
+
+.black-text {
+  color: var(--black);
+}
+
+.pdf-your-company-your-client-container {
+  display: flex;
+}
+
+.pdf-your-company-your-client-subcontainer {
+  display: flex;
+  flex-direction: column;
+  padding: 18px 40px;
+  color: var(--grey);
+  row-gap: 5px;
+  flex: 1;
+  border-bottom: 1px solid var(--lighter-grey);
+  border-right: 1px solid var(--lighter-grey);
+  padding-bottom: 25px;
+
+}
+
+.pdf-your-company-your-client-logo-container {
+  display: flex;
+  width: fit-content;
+  padding: 10px 0px;
+}
+
+.pdf-your-company-your-client-logo {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+  max-width: 180px;
+  max-height: 45px;
+  background-size: contain;
+}
+
+.pdf-your-company-your-client-company-name {
+  font-size: 24px;
+  color: var(--black);
+  padding-bottom: 10px;
+}
+
+.pdf-your-company-your-client-email {
+  color: hsl(0, 0%, 37.5%);
+  padding-bottom: 10px;
+}
+
+
+/* pdf invoice-details */
+.pdf-invoice-details-container {
+  padding: 10px 40px;
+  overflow-y: auto;
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+  height: 100%;
+}
+
+.pdf-invoice-details-container::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+.pdf-invoice-details-header-container {
+  display: flex;
+  flex-direction: row;
+  padding: 20px 0px;
+  color: var(--grey);
+}
+
+.pdf-invoice-details-header-left {
+  flex: 3;
+}
+
+.pdf-invoice-details-header-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pdf-invoice-details-item-container {
+  display: flex;
+  flex-direction: row;
+  padding: 20px 0px;
+  border-bottom: 1px solid var(--lighter-grey);
+}
+
+.pdf-invoice-details-item-left {
+  flex: 3;
+}
+
+.pdf-invoice-details-item-right {
+  flex: 1;
+  color: hsl(0, 0%, 37.5%);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pdf-invoice-details-options-container {
+  display: flex;
+  flex-direction: row;
+  color: var(--grey);
+}
+
+.pdf-invoice-details-options-left {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  flex-direction: column;
+  padding: 20px 0px;
+  
+}
+
+.pdf-invoice-details-options-right {
+  flex: 1;
+  flex-direction: column;
+}
+
+.pdf-invoice-details-options-note {
+  padding-bottom: 10px;
+  font-size: 14px;
+}
+
+.pdf-invoice-details-options-note-content {
+  overflow-wrap: anywhere;
+}
+
+.pdf-invoice-details-options-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 0px;
+  margin-left: 40px;
+  border-bottom: 1px solid var(--lighter-grey);
+}
+
+.pdf-invoice-details-options-list:last-child {
+  border: none;
+}
+
+.pdf-invoice-details-options-total {
+  font-size: 20px;
+  color: var(--black);
+}
+
+
+/* payment method container */
+.pdf-payment-method-container {
+  display: flex;
+  flex-direction: row;
+  padding: 20px 40px;
+  color: var(--grey);
+  margin-top: auto;
+  border-top: 1px solid var(--lighter-grey);
+}
+
+.pdf-payment-method-left {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  row-gap: 10px;
+}
+
+.pdf-payment-method-right {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding-left: 40px;
+  margin-left: 40px;
+  row-gap: 10px;
+}
+
+.pdf-payment-method-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.pdf-payment-method-currency-container {
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+  align-items: center;
+}
+
+.pdf-payment-method-currency-logo {
+  object-fit: contain;
+  height: 30px;
+}
+
+.pdf-payment-method-currency-name {
+  color: var(--black);
+  font-size: 16px;
+}
+
+/* footer message */
+.footer-message {
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+}
+
+.maji-lab-logo {
+  object-fit: contain;
+  height: 14px;
+  text-align: center;
+  padding-left: 5px;
+}
+
+/* blue borders */
+
+.blue-border-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.blue-border-subcontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.blue-border-top-left {
+  border-left: 3px solid var(--blue);
+  border-top: 3px solid var(--blue);
+  animation: border-square-top-left 600ms ease-in infinite alternate
+}
+
+.blue-border-top-right {
+  border-right: 3px solid var(--blue);
+  border-top: 3px solid var(--blue);
+  animation: border-square-top-right 600ms ease-in infinite alternate
+}
+
+.blue-border-bottom-left {
+  border-left: 3px solid var(--blue);
+  border-bottom: 3px solid var(--blue);
+  animation: border-square-bottom-left 600ms ease-in infinite alternate
+}
+
+.blue-border-bottom-right {
+  border-right: 3px solid var(--blue);
+  border-bottom: 3px solid var(--blue);
+  animation: border-square-bottom-right 600ms ease-in infinite alternate
+}
+
+.blue-border-squares {
+  height: 12px;
+  width: 12px;
+}
+
+/* image uploader classes */
+
+.image-uploader-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-uploader-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25px;
+  width: 25px;
+  border-radius: 100%;
+  border: 1px solid var(--lighter-grey);
+  background-color: var(--white);
+  cursor: pointer;
+  position: relative;
+}
+
+.image-uploader-button:hover {
+  background-color: var(--lighter-grey);
+}
+
+
+.image-uploader-logo {
+  object-fit: contain;
+  height: 14px;
+  cursor: pointer;
+}
+
+.pad-20px {
+  padding: 15px 0px;
+}
+
+.main-nav-buttons-right {
+  align-items: flex-end;
+}
+
+/* cropping logo animation */
+.crop-circle {
+  border-radius: 50%;
+}
+
+/* removing the funny arrows/spinners fron input numbers */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+/* hovering headers */
+.hover-headers {
+  display: flex;
+  position: absolute;
+  z-index: 10;
+  left: 50%;
+  transform: translateX(-50%);
+  flex-direction: row;
+  color: var(--white);
+  background-color: var(--black);
+  border-radius: 20px;
+  font-size: 12px;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+  padding: 4px 5px;
+  padding-right: 7px;
+  transition: all 200ms ease-in-out;
+  transform: translate(-50%, -10px);
+  opacity: 0;
+}
+
+.hover-headers.ani-fade-in {
+  transform: translate(-50%, 0px);
+  opacity: 1;
+}
+
+.hover-headers-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--grey);
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  font-size: 12px;
+}
+
+.temp-container {
+  overflow-y: auto;
+}
+
+
+/* pdf scanner animation */
+
+.pdf-scan-animation-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(218, 89%, 63%, 5%);
+  border: 1px solid hsla(218, 89%, 63%, 30%);
+  position: absolute;
+  z-index: 99;
+  pointer-events: none;
+  /* transform: scale(0); */
+  opacity: 0;
+  transition: all 150ms ease-out;
+  overflow: hidden;
+}
+
+.scanner-box-appears {
+  opacity: 1;
+  /* transform: scale(1); */
+}
+
+.pdf-scan-animation-gradient-line {
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, hsla(218, 89%, 63%, 30%), hsla(218, 89%, 63%, 5%), hsla(218, 89%, 63%, 0%));
+  border-bottom: 1px solid hsla(218, 89%, 63%, 100%);
+  pointer-events: none;
+  opacity: 0;
+}
+
+@keyframes scanner-down-animation {
+  0%{transform: translateY(-100px); opacity: 0.3;}
+  20%{transform: translateY(-100px); opacity: 0.3;}
+  99%{opacity: 0.3;}
+  100%{transform: translateY(900px); opacity: 0.3}
+}
+
+@keyframes scanner-box-hover {
+  0%{transform: scale(0.98);}
+  100%{transform: scale(0.97);}
+}
+
+.scanner-box-hover {
+  animation: scanner-box-hover 600ms ease-in infinite alternate
+}
+
+.scanner-down-animation {
+  animation: scanner-down-animation 1000ms ease-in-out forwards;
+}
